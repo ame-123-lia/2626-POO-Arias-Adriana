@@ -1,0 +1,24 @@
+Markdown
+# Sistema de Gestión de Restaurante (POO Modular)
+
+**Estudiante:** [Adriana Verronica Arias]
+**Asignatura:** Programación Orientada a Objetos - Semana 4
+**Carrera:** Tecnología de la Información
+**Institución:** Universidad Estatal Amazónica
+
+---
+
+## 1. Descripción del Sistema
+Este proyecto implementa un sistema básico para la simulación y gestión de un restaurante aplicando los pilares de la Programación Orientada a Objetos (POO) en Python. El programa permite estructurar de forma independiente las entidades del negocio (como los productos del menú y los clientes de las mesas) y unificarlas mediante un módulo de servicios encargado de la lógica y la visualización de los datos por consola.
+
+## 2. Estructura del Proyecto dentro de la Tarea
+El software se ha organizado de manera modular respetando estrictamente la separación de responsabilidades exigida:
+
+```text
+SEMANA 4/
+├── modelos/
+│   ├── producto.py     # Define la entidad Producto (atributos y formato de texto)
+│   └── cliente.py      # Define la entidad Cliente (datos básicos e identificación)
+├── servicios/
+│   └── restaurante.py  # Lógica del negocio (administración de menús y clientes)
+└── main.py             # Punto de entrada y ejecución principal del programa
