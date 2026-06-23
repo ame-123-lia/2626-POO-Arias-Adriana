@@ -1,37 +1,31 @@
-# Sabor Amazónico — Restaurante modular en Python
+
+# Asignatura — Programación Orientada a Objetos (POO) — Universidad Estatal Amazónica
 
 Resumen
 -------
-Proyecto educativo que implementa un sistema modular para la gestión de un restaurante utilizando Programación Orientada a Objetos en Python. Este repositorio contiene las prácticas de la materia POO (Semana 4) y está organizado por tareas/semanas para facilitar su revisión y reutilización.
+Repositorio educativo que contiene prácticas y ejercicios de Programación Orientada a Objetos (POO) organizados por tareas. El objetivo es ofrecer ejemplos modulares y fáciles de entender para aprender a estructurar proyectos en Python usando paquetes y clases.
 
-Datos del estudiante
---------------------
-- Nombre: Adriana Verónica Arias
-- Asignatura: Programación Orientada a Objetos (POO) — Semana 4
-- Institución: Universidad Estatal Amazónica
+Autor
+-----
+- Adriana Verónica Arias
 
-Descripción del proyecto
-------------------------
-El sistema modela un restaurante con componentes separados (modelos, servicios y un punto de entrada) que permiten:
+Descripción general
+-------------------
+Este proyecto muestra varias pequeñas aplicaciones y ejercicios que ilustran conceptos de POO en Python: definición de modelos (clases), separación en módulos, y servicios que operan sobre esos modelos. Es ideal como material didáctico y punto de partida para ampliaciones.
 
-- Gestionar clientes
-- Gestionar productos/menú
-- Realizar operaciones básicas del restaurante (crear pedido, agregar productos, calcular totales)
+Principales funcionalidades (ejemplos)
+- Modelos básicos para representar entidades (por ejemplo: cliente, producto, mascota).
+- Servicios que encapsulan lógica de negocio (por ejemplo: operaciones relacionadas con un restaurante o gestión de pedidos).
+- Scripts de ejemplo para ejecutar y probar los componentes.
 
 Tecnologías
 -----------
 - Python 3.10+ (o versión compatible)
-- Estructura modular por paquetes
 
-Características
----------------
-- Código organizado en módulos: modelos, servicios y scripts de ejemplo
-- Diseño pensado para ser ampliable (añadir más entidades y servicios)
-- Fácil de ejecutar y de entender para fines educativos
+Estructura del repositorio
+--------------------------
+El repositorio está organizado por carpetas que contienen prácticas y tareas. A modo orientativo:
 
-Árbol de carpetas (versión limpia)
----------------------------------
-```
 2626-POO-Arias-Adriana/
 ├── README.md
 ├── pyproject.toml
@@ -39,27 +33,17 @@ Características
 ├── PARCIAL 2/
 ├── PARCIAL1/
 │   ├── SEMANA 2/
-│   │   ├── explicacion_tarea_semana_2.md
-│   │   └── tarea semana 2 . py
 │   ├── SEMANA 3/
-│   │   ├── README.md
-│   │   ├── programacion-tradicional/
-│   │   │   └── tradicional.py
-│   │   └── programacion_poo/
-│   │       ├── main.py
-│   │       └── mascota.py
 │   └── SEMANA 4/
-│       ├── README.md
 │       ├── main.py
 │       ├── modelos/
 │       │   ├── cliente.py
-│       │   └── producto.py
-│       └── servicios/
-│           └── restaurante.py
-```
++       │   └── producto.py
+       └── servicios/
+           └── restaurante.py
 
-Instrucciones rápidas
----------------------
+Cómo ejecutar (instrucciones rápidas)
+-----------------------------------
 1. Crear un entorno virtual (recomendado):
 
    python -m venv .venv
@@ -68,13 +52,14 @@ Instrucciones rápidas
 
    .\.venv\Scripts\Activate.ps1
 
-3. Ejecutar el ejemplo principal (si existe):
+3. Ejecutar un script de ejemplo (por ejemplo, el principal dentro de `PARCIAL1/SEMANA 4/` si desea probar el ejemplo del restaurante):
 
-   python PARCIAL1/SEMANA 4/main.py
+   python "PARCIAL1/SEMANA 4/main.py"
 
 Notas
 -----
-Si desea mejorar o ejecutar partes concretas, abra los módulos en `PARCIAL1/SEMANA 4/` y ejecute `main.py`. El código está pensado como ejemplo didáctico para aprender organización modular con POO.
+- Algunos subdirectorios contienen ejercicios por semana; revise la estructura para encontrar el ejemplo que desea ejecutar.
+- Este README ofrece información global del proyecto; los detalles específicos de cada práctica (por ejemplo, instrucciones o explicaciones) están dentro de sus respectivas carpetas.
 
 Contacto
 -------
