@@ -1,5 +1,5 @@
 """
-Módulo principal (main) del sistema de gestión de restaurante
+Modulo principal (main) del sistema de gestion de restaurante
 Punto de entrada del programa que demuestra el uso de todas las clases del sistema
 """
 
@@ -7,37 +7,37 @@ Punto de entrada del programa que demuestra el uso de todas las clases del siste
 from restaurante_app.modelos.producto import Producto
 from restaurante_app.modelos.cliente import Cliente
 
-# Importación del servicio principal
+# Importacion del servicio principal
 from restaurante_app.servicios.restaurante import Restaurante
 
 
 def main() -> None:
     """
-    Función principal que ejecuta el programa.
+    Funcion principal que ejecuta el programa.
     Crea instancias de productos y clientes, los agrega al restaurante
-    y muestra la información de forma organizada.
+    y muestra la informacion de forma organizada.
     """
 
     # ============================================================
-    # SECCIÓN 1: Crear instancia del restaurante
+    # SECCION 1: Crear instancia del restaurante
     # ============================================================
     print("\n" + "="*60)
-    print("SISTEMA DE GESTIÓN DE RESTAURANTE - SEMANA 5")
+    print("SISTEMA DE GESTION DE RESTAURANTE - SEMANA 5")
     print("="*60 + "\n")
 
-    # Crear el restaurante con nombre y año de fundación
-    restaurante_amazonico = Restaurante(nombre="Sabor Amazónico", año_fundacion=2020)
+    # Crear el restaurante con nombre y año de fundacion
+    restaurante_amazonico = Restaurante(nombre="Sabor Amazonico", año_fundacion=2020)
     restaurante_amazonico.mostrar_resumen()
 
     # ============================================================
-    # SECCIÓN 2: Crear productos y agregarlos al restaurante
+    # SECCION 2: Crear productos y agregarlos al restaurante
     # ============================================================
     print("\n> Agregando productos al menu...\n")
 
-    # Crear primer producto: Ceviche Amazónico
+    # Crear primer producto: Ceviche Amazonico
     producto_ceviche = Producto(
-        nombre="Ceviche Amazónico",
-        descripcion="Ceviche preparado con pescado fresco de la región",
+        nombre="Ceviche Amazonico",
+        descripcion="Ceviche preparado con pescado fresco de la region",
         precio=18.50,
         cantidad_disponible=15,
         es_vegetariano=False
@@ -47,17 +47,17 @@ def main() -> None:
     # Crear segundo producto: Tacacho con queso
     producto_tacacho = Producto(
         nombre="Tacacho con Queso",
-        descripcion="Plátano frito acompañado de queso derretido",
+        descripcion="Platano frito acompanado de queso derretido",
         precio=12.00,
         cantidad_disponible=20,
         es_vegetariano=True
     )
     restaurante_amazonico.agregar_producto(producto_tacacho)
 
-    # Crear tercer producto: Jugo de Guaraná
+    # Crear tercer producto: Jugo de Guarana
     producto_guarana = Producto(
-        nombre="Jugo de Guaraná",
-        descripcion="Bebida energética natural de fruta amazónica",
+        nombre="Jugo de Guarana",
+        descripcion="Bebida energetica natural de fruta amazonica",
         precio=5.50,
         cantidad_disponible=30,
         es_vegetariano=True
@@ -75,7 +75,7 @@ def main() -> None:
     restaurante_amazonico.agregar_producto(producto_picadillo)
 
     # ============================================================
-    # SECCIÓN 3: Crear clientes y registrarlos en el restaurante
+    # SECCION 3: Crear clientes y registrarlos en el restaurante
     # ============================================================
     print("\n> Registrando clientes en el sistema...\n")
 
@@ -91,7 +91,7 @@ def main() -> None:
 
     # Crear segundo cliente: cliente regular
     cliente_maria = Cliente(
-        nombre="María Fernanda Gómez",
+        nombre="Maria Fernanda Gomez",
         email="maria.gomez@email.com",
         telefono="+593-2-6666666",
         edad=28,
@@ -111,7 +111,7 @@ def main() -> None:
 
     # Crear cuarto cliente: cliente regular
     cliente_ana = Cliente(
-        nombre="Ana Patricia López",
+        nombre="Ana Patricia Lopez",
         email="ana.lopez@email.com",
         telefono="+593-2-8888888",
         edad=31,
@@ -120,40 +120,40 @@ def main() -> None:
     restaurante_amazonico.agregar_cliente(cliente_ana)
 
     # ============================================================
-    # SECCIÓN 4: Mostrar información del menú
+    # SECCION 4: Mostrar información del menú
     # ============================================================
     restaurante_amazonico.listar_productos()
 
     # ============================================================
-    # SECCIÓN 5: Mostrar lista de clientes registrados
+    # SECCION 5: Mostrar lista de clientes registrados
     # ============================================================
     restaurante_amazonico.listar_clientes()
 
     # ============================================================
-    # SECCIÓN 6: Demostración de métodos adicionales
+    # SECCION 6: Demostracion de metodos adicionales
     # ============================================================
     print("\n" + "="*60)
-    print("PRUEBAS DE MÉTODOS ADICIONALES")
+    print("PRUEBAS DE METODOS ADICIONALES")
     print("="*60 + "\n")
 
     # Verificar disponibilidad de un producto
-    print("→ Verificando disponibilidad de productos:")
+    print("> Verificando disponibilidad de productos:")
     print(f"  {producto_ceviche.nombre}: {'Disponible' if producto_ceviche.obtener_disponibilidad() else 'No disponible'}")
     print(f"  {producto_tacacho.nombre}: {'Disponible' if producto_tacacho.obtener_disponibilidad() else 'No disponible'}\n")
 
     # Actualizar cantidad de un producto
-    print("→ Actualizando stock de productos:")
+    print("> Actualizando stock de productos:")
     producto_guarana.actualizar_cantidad(-5)
     producto_ceviche.actualizar_cantidad(3)
     print()
 
-    # Actualizar información de un cliente
+    # Actualizar informacion de un cliente
     print("> Actualizando datos de clientes:")
     cliente_maria.actualizar_email("maria.fernanda.gomez@newemail.com")
     cliente_juan.actualizar_telefono("+593-2-9999999")
     print()
 
-    # Mostrar estado de membresía
+    # Mostrar estado de membresia
     print("> Estado de membresia de clientes:")
     print(f"  {cliente_juan.nombre}: {cliente_juan.obtener_estado_membresia()}")
     print(f"  {cliente_maria.nombre}: {cliente_maria.obtener_estado_membresia()}\n")
@@ -171,12 +171,12 @@ def main() -> None:
         print(f"  [OK] Cliente encontrado: {cliente_encontrado.nombre} ({cliente_encontrado.obtener_estado_membresia()})\n")
 
     # ============================================================
-    # SECCIÓN 7: Resumen final
+    # SECCION 7: Resumen final
     # ============================================================
     restaurante_amazonico.mostrar_resumen()
 
     print("="*60)
-    print("FIN DE LA DEMOSTRACIÓN DEL SISTEMA")
+    print("FIN DE LA DEMOSTRACION DEL SISTEMA")
     print("="*60)
 
 
