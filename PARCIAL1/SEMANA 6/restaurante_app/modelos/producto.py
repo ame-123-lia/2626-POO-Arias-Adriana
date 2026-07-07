@@ -35,7 +35,24 @@ class Producto:
         self.__precio = float(nuevo_precio)
 
     def mostrar_informacion(self) -> str:
-        """Devuelve una representación textual genérica del producto."""
+        """Devuelve una representación textual genérica del producto.
+
+        Usamos el getter para acceder al precio (ejemplo de encapsulación).
+        """
         dispo = "Sí" if self.disponible else "No"
-        return f"Producto: {self.nombre} | Precio: S/.{self.__precio:.2f} | Disponible: {dispo}"
+        return (
+            f"Producto: {self.nombre} | Precio: USD {self.obtener_precio():.2f} | "
+            f"Disponible: {dispo}"
+        )
+
+    def informacion_pedagogica(self) -> str:
+        """Devuelve una cadena con información didáctica sobre POO aplicada.
+
+        Indica la clase del objeto, que el precio está encapsulado y el método
+        usado para acceder al precio.
+        """
+        return (
+            f"Clase real: {self.__class__.__name__} | "
+            f"Atributo encapsulado: __precio (acceso mediante obtener_precio())"
+        )
 

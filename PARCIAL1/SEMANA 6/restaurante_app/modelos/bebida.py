@@ -19,7 +19,20 @@ class Bebida(Producto):
         self.tipo = tipo
 
     def mostrar_informacion(self) -> str:
-        """Sobrescribe mostrar_informacion para incluir datos de bebida."""
+        """Sobrescribe mostrar_informacion para incluir datos de la bebida.
+
+        Incluye volumen y categoría/tipo.
+        """
         base = super().mostrar_informacion()
-        return f"{base} | Tipo: Bebida | Volumen: {self.volumen_ml} ml | Categoría: {self.tipo}"
+        return (
+            f"{base} | Tipo: Bebida | Volumen: {self.volumen_ml} ml | "
+            f"Categoría: {self.tipo}"
+        )
+
+    def informacion_pedagogica(self) -> str:
+        """Información didáctica específica para Bebida."""
+        return (
+            "Bebida hereda de Producto -> reutiliza nombre, precio y disponibilidad; "
+            f"añade volumen_ml y tipo. Clase: {self.__class__.__name__}."
+        )
 

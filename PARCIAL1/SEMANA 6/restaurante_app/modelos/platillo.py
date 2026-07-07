@@ -19,7 +19,21 @@ class Platillo(Producto):
         self.tiempo_preparacion = tiempo_preparacion
 
     def mostrar_informacion(self) -> str:
-        """Sobrescribe mostrar_informacion para incluir datos de platillo."""
+        """Sobrescribe mostrar_informacion para incluir datos del platillo.
+
+        Incluye calorías y tiempo de preparación. Usa el método padre para obtener
+        la parte común (polimorfismo en práctica).
+        """
         base = super().mostrar_informacion()
-        return f"{base} | Tipo: Platillo | Calorías: {self.calorias} kcal | Tiempo prep: {self.tiempo_preparacion} min"
+        return (
+            f"{base} | Tipo: Platillo | Calorías: {self.calorias} kcal | "
+            f"Tiempo prep: {self.tiempo_preparacion} min"
+        )
+
+    def informacion_pedagogica(self) -> str:
+        """Información didáctica específica para Platillo."""
+        return (
+            "Platillo hereda de Producto -> reutiliza atributos comunes y añade: "
+            f"calorias, tiempo_preparacion. Su clase es {self.__class__.__name__}."
+        )
 

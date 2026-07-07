@@ -2,9 +2,29 @@
 Punto de entrada del sistema restaurante_app.
 Desde aquí se crean objetos Platillo y Bebida, se registran en Restaurante y se imprime la lista.
 """
-from .modelos.platillo import Platillo
-from .modelos.bebida import Bebida
-from .servicios.restaurante import Restaurante
+"""Punto de entrada del paquete restaurante_app.
+
+Soporta ejecución como módulo (python -m restaurante_app.main) y como script
+directo (python main.py) ajustando las importaciones cuando sea necesario.
+"""
+try:
+    # Importaciones cuando se ejecuta como paquete
+    from .modelos.platillo import Platillo
+    from .modelos.bebida import Bebida
+    from .servicios.restaurante import Restaurante
+except Exception:
+    # Fallback cuando se ejecuta directamente como script (sin parent package)
+    import sys
+    import os
+
+    # Añadir la carpeta del paquete al path para poder importar los módulos internos
+    package_dir = os.path.dirname(os.path.abspath(__file__))
+    if package_dir not in sys.path:
+        sys.path.insert(0, package_dir)
+
+    from modelos.platillo import Platillo
+    from modelos.bebida import Bebida
+    from servicios.restaurante import Restaurante
 
 
 def main():
