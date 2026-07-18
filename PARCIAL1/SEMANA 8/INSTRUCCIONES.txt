@@ -1,0 +1,186 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                            ║
+║         ✨ PROYECTO RESTAURANTE_APP SEMANA 8 - GUÍA DE USO ✨             ║
+║                                                                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+📌 DESCRIPCIÓN
+─────────────────────────────────────────────────────────────────────────────
+Tu proyecto restaurante_app está COMPLETAMENTE FUNCIONAL con:
+
+✓ Explicación didáctica de principios SOLID integrada
+✓ Menú interactivo con opciones para productos, bebidas y clientes
+✓ Validación de códigos y identificaciones únicas
+✓ Polimorfismo en acción (Bebida se comporta como Producto)
+✓ Ejemplos de demostraciones automáticas
+
+
+🚀 CÓMO EJECUTAR
+─────────────────────────────────────────────────────────────────────────────
+
+1️⃣  SISTEMA INTERACTIVO CON EXPLICACIÓN SOLID:
+
+   cd "C:\Users\User\OneDrive\Escritorio\2626-POO-Arias-Adriana\PARCIAL1\SEMANA 8"
+   python -m restaurante_app.main
+
+   ➤ Al iniciar, verás una explicación teórica de S, O y L
+   ➤ Luego accederás al menú interactivo
+   ➤ Opción 6 te permite ver nuevamente la explicación en cualquier momento
+
+
+2️⃣  DEMOSTRACIÓN AUTOMÁTICA DE SOLID:
+
+   cd "C:\Users\User\OneDrive\Escritorio\2626-POO-Arias-Adriana\PARCIAL1\SEMANA 8"
+   python demo_auto.py
+
+   ➤ Muestra demostración completa sin interacción del usuario
+   ➤ Incluye: SRP, OCP, LSP, polimorfismo, validaciones
+
+
+3️⃣  VERIFICACIÓN DEL PROYECTO:
+
+   cd "C:\Users\User\OneDrive\Escritorio\2626-POO-Arias-Adriana\PARCIAL1\SEMANA 8"
+   python verificar_proyecto.py
+
+   ➤ Comprueba que todos los archivos estén en su lugar
+   ➤ Verifica que el sistema funciona correctamente
+
+
+📂 ESTRUCTURA DEL PROYECTO
+─────────────────────────────────────────────────────────────────────────────
+
+SEMANA 8/
+├── restaurante_app/
+│   ├── __init__.py
+│   ├── main.py                    ← AQUÍ ESTÁ LA EXPLICACIÓN SOLID
+│   ├── modelos/
+│   │   ├── __init__.py
+│   │   ├── producto.py            ← Clase Producto (base)
+│   │   ├── bebida.py              ← Clase Bebida (hereda Producto)
+│   │   └── cliente.py             ← Clase Cliente
+│   └── servicios/
+│       ├── __init__.py
+│       └── restaurante.py         ← Servicio que administra colecciones
+├── README.md                      ← Documentación completa
+├── demo_auto.py                   ← Demostración automática
+├── verificar_proyecto.py          ← Verificación del sistema
+├── demo_program.py
+├── test_program.py
+└── demo_interactive.py
+
+
+🎓 PRINCIPIOS SOLID EXPLICADOS EN EL PROGRAMA
+─────────────────────────────────────────────────────────────────────────────
+
+S — RESPONSABILIDAD ÚNICA (Single Responsibility)
+   • Producto/Bebida/Cliente: Guardan datos
+   • Restaurante: Administra colecciones
+   • main.py: Interactúa con el usuario
+   ✓ Cambios localizados, fácil de mantener
+
+O — ABIERTO/CERRADO (Open/Closed)
+   • Diseño extensible: puedes agregar Platillo, Postre, etc.
+   • Restaurante NO se modifica, solo se heredan de Producto
+   • POLIMORFISMO en acción
+   ✓ Menos riesgo, código robusto
+
+L — SUSTITUCIÓN DE LISKOV (Liskov Substitution)
+   • Bebida puede usarse donde se espera Producto
+   • Restaurante NO pregunta "¿eres Bebida o Producto?"
+   • Simplemente llama: producto.mostrar_informacion()
+   ✓ Polimorfismo funciona perfecto
+
+
+📋 MENÚ INTERACTIVO
+─────────────────────────────────────────────────────────────────────────────
+
+Al ejecutar "python -m restaurante_app.main", verás:
+
+========================================
+        SISTEMA DE RESTAURANTE
+========================================
+1. Registrar producto
+2. Registrar bebida
+3. Registrar cliente
+----------------------------------------
+4. Listar productos
+5. Listar clientes
+----------------------------------------
+6. Ver explicación SOLID
+7. Salir
+
+
+💡 EJEMPLO DE USO
+─────────────────────────────────────────────────────────────────────────────
+
+Opción 1: Registrar Producto
+  Código del producto: P001
+  Nombre: Pizza Margarita
+  Categoría: Comida
+  Precio: 15.50
+  ✓ Producto registrado correctamente.
+
+Opción 2: Registrar Bebida
+  Código de la bebida: B001
+  Nombre: Coca Cola
+  Categoría: Bebida
+  Precio: 3.50
+  Tamaño (por ejemplo, 500ml): 500ml
+  Envase (lata, botella, vaso): Botella
+  ✓ Bebida registrada correctamente.
+
+Opción 4: Listar productos
+  📋 --- PRODUCTOS REGISTRADOS ---
+    Código: P001 | Nombre: Pizza Margarita | Categoría: Comida | Precio: $15.50
+    Código: B001 | Nombre: Coca Cola | Categoría: Bebida | Precio: $3.50 | Tamaño: 500ml | Envase: Botella
+
+
+✅ LO QUE VERÁS AL EJECUTAR
+─────────────────────────────────────────────────────────────────────────────
+
+🔹 EXPLICACIÓN DE PRINCIPIOS SOLID (al iniciar)
+   └─ Qué es SRP, OCP, LSP y cómo se aplican en el restaurante
+
+🔹 MENÚ AMIGABLE CON EMOJIS
+   └─ Interfaz intuitiva con retroalimentación clara
+
+🔹 VALIDACIONES FUNCIONANDO
+   └─ No permite códigos o identificaciones duplicadas
+
+🔹 POLIMORFISMO EN ACCIÓN
+   └─ Productos y Bebidas listados en la misma colección sin condicionales
+
+🔹 OPCIÓN PARA RELEER PRINCIPIOS SOLID ANYTIME
+   └─ Presiona 6 en el menú para reforzar tu comprensión
+
+
+⚠️  ANTES DE ENTREGAR
+─────────────────────────────────────────────────────────────────────────────
+
+□ Completa el campo "Nombre del estudiante" en README.md
+□ Ejecuta una vez el programa interactivo (python -m restaurante_app.main)
+□ Prueba registrando productos, bebidas y clientes
+□ Verifica que no se permitan duplicados
+□ Lee la explicación SOLID que aparece al inicio
+
+
+🔗 COMANDOS RÁPIDOS (Copia y pega)
+─────────────────────────────────────────────────────────────────────────────
+
+cd C:\Users\User\OneDrive\Escritorio\2626-POO-Arias-Adriana\PARCIAL1\SEMANA 8
+python -m restaurante_app.main
+
+O en una línea:
+
+cd C:\Users\User\OneDrive\Escritorio\2626-POO-Arias-Adriana\PARCIAL1\SEMANA 8 ; python -m restaurante_app.main
+
+
+✨ ¡LISTO PARA USAR! ✨
+─────────────────────────────────────────────────────────────────────────────
+
+Tu proyecto está 100% funcional y demuestra CLARAMENTE los principios SOLID
+aplicados a un dominio real (Restaurante).
+
+¡Disfruta aprendiendo sobre diseño de software! 🎓
+
