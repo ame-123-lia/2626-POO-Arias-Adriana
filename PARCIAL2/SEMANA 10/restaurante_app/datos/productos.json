@@ -1,0 +1,79 @@
+[
+  {
+    "codigo": "P001",
+    "nombre": "Pizza Margherita",
+    "categoria": "Platos Principales",
+    "precio": 12.99,
+    "stock": 50
+  },
+  {
+    "codigo": "P002",
+    "nombre": "Pasta Carbonara",
+    "categoria": "Platos Principales",
+    "precio": 14.5,
+    "stock": 35
+  },
+  {
+    "codigo": "P003",
+    "nombre": "Ensalada César",
+    "categoria": "Ensaladas",
+    "precio": 8.99,
+    "stock": 40
+  },
+  {
+    "codigo": "P004",
+    "nombre": "Salmón a la Mantequilla",
+    "categoria": "Platos Principales",
+    "precio": 22.99,
+    "stock": 20
+  },
+  {
+    "codigo": "P005",
+    "nombre": "Sopa de Tomate",
+    "categoria": "Sopas",
+    "precio": 6.5,
+    "stock": 30
+  },
+  {
+    "codigo": "B001",
+    "nombre": "Agua Natural",
+    "categoria": "Bebidas",
+    "precio": 2.0,
+    "stock": 100
+  },
+  {
+    "codigo": "B002",
+    "nombre": "Jugo de Naranja",
+    "categoria": "Bebidas",
+    "precio": 4.5,
+    "stock": 60
+  },
+  {
+    "codigo": "B003",
+    "nombre": "Café Americano",
+    "categoria": "Bebidas",
+    "precio": 3.5,
+    "stock": 80
+  },
+  {
+    "codigo": "D001",
+    "nombre": "Brownie de Chocolate",
+    "categoria": "Postres",
+    "precio": 5.99,
+    "stock": 25
+  },
+  {
+    "codigo": "D002",
+    "nombre": "Helado de Vainilla",
+    "categoria": "Postres",
+    "precio": 4.99,
+    "stock": 45
+  },
+  {
+    "codigo": "P999",
+    "nombre": "Steak Premium",
+    "categoria": "Carnes",
+    "precio": 29.99,
+    "stock": 15
+  }
+]
