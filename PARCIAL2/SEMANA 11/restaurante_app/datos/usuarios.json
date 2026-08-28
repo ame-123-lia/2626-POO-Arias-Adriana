@@ -1,0 +1,17 @@
+[
+  {
+    "identificacion": "12345678",
+    "nombre": "Juan Pérez",
+    "correo": "juan.perez@example.com"
+  },
+  {
+    "identificacion": "87654321",
+    "nombre": "María García",
+    "correo": "maria.garcia@example.com"
+  },
+  {
+    "identificacion": "11223344",
+    "nombre": "Carlos López",
+    "correo": "carlos.lopez@example.com"
+  }
+]
