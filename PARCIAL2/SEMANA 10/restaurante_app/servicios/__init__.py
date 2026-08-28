@@ -1,2 +1,0 @@
-"""Paquete de servicios para restaurante_app - Semana 10."""
-
