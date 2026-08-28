@@ -1,5 +1,0 @@
-﻿{
-  "C001": {"nombre": "Ana Pérez", "email": "ana@example.com", "telefono": "555-1234", "direccion": "Calle Falsa 123"},
-  "C002": {"nombre": "Luis Gómez", "email": "luis@example.com", "telefono": "555-5678", "direccion": "Av. Siempre Viva 742"},
-  "C003": {"nombre": "María López", "email": "maria@example.com", "telefono": "555-9012", "direccion": "Plaza Central 5"}
-}

@@ -1,5 +1,0 @@
-﻿{
-  "P001": {"name": "Camisa", "price": 19.99, "stock": 50, "category": "Ropa"},
-  "P002": {"name": "Pantalón", "price": 29.99, "stock": 30, "category": "Ropa"},
-  "P003": {"name": "Cuaderno", "price": 2.5, "stock": 200, "category": "Papelería"}
-}

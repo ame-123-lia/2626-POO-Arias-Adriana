@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+# Pycache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+=======
 # IDE settings
 .idea/
 .vscode/
@@ -35,3 +63,4 @@ env/
 *.swo
 *~
 
+>>>>>>> dd645dc17eb11c1017dab808d63bb5f00cd488b6
