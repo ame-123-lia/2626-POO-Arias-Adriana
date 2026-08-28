@@ -1,0 +1,49 @@
+"""Ejemplo: Clase CuentaBancaria (Semana 2)
+
+Archivo renombrado para eliminar espacios en el nombre y mejorar compatibilidad.
+"""
+
+class CuentaBancaria:
+    """Clase que representa una cuenta bancaria sencilla."""
+
+    def __init__(self, titular, numero_cuenta, saldo_inicial=0.0):
+        self.titular = titular
+        self.numero_cuenta = numero_cuenta
+        self.saldo = float(saldo_inicial)
+
+    def depositar(self, monto):
+        if monto <= 0:
+            print("El monto a depositar debe ser mayor que cero.")
+            return
+        self.saldo += monto
+        print(f"Depósito: ${monto:.2f} realizado.")
+
+    def retirar(self, monto):
+        if monto <= 0:
+            print("El monto a retirar debe ser mayor que cero.")
+            return
+        if monto > self.saldo:
+            print("Fondos insuficientes para realizar el retiro.")
+            return
+        self.saldo -= monto
+        print(f"Retiro: ${monto:.2f} realizado.")
+
+    def mostrar_informacion(self):
+        print("Información de la cuenta:")
+        print(f"Titular: {self.titular}")
+        print(f"Número de cuenta: {self.numero_cuenta}")
+        print(f"Saldo actual: ${self.saldo:.2f}")
+
+
+if __name__ == "__main__":
+    cuenta = CuentaBancaria("Adriana Arias", "1234567890", 1500.0)
+    cuenta.mostrar_informacion()
+
+    print("\nRealizando operaciones:")
+    cuenta.depositar(250.0)
+    cuenta.retirar(100.0)
+    cuenta.retirar(2000.0)
+
+    print("\nEstado final de la cuenta:")
+    cuenta.mostrar_informacion()
+
