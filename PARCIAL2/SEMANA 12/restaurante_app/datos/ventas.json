@@ -1,0 +1,22 @@
+[
+  {
+    "usuario_id": "12345678",
+    "producto_codigo": "P001",
+    "cantidad": 2
+  },
+  {
+    "usuario_id": "87654321",
+    "producto_codigo": "P002",
+    "cantidad": 1
+  },
+  {
+    "usuario_id": "11223344",
+    "producto_codigo": "B001",
+    "cantidad": 3
+  },
+  {
+    "usuario_id": "12345678",
+    "producto_codigo": "P005",
+    "cantidad": 1
+  }
+]
