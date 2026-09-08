@@ -1,0 +1,44 @@
+[
+  {
+    "id": "P001",
+    "nombre": "Hamburguesa Clásica",
+    "precio": 8.99,
+    "cantidad": 50,
+    "descripcion": "Hamburguesa con carne de res, lechuga y tomate"
+  },
+  {
+    "id": "P002",
+    "nombre": "Pizza Margarita",
+    "precio": 12.50,
+    "cantidad": 30,
+    "descripcion": "Pizza con queso mozzarella y tomate"
+  },
+  {
+    "id": "P003",
+    "nombre": "Pasta Alfredo",
+    "precio": 10.99,
+    "cantidad": 25,
+    "descripcion": "Pasta con salsa Alfredo cremosa"
+  },
+  {
+    "id": "P004",
+    "nombre": "Ensalada César",
+    "precio": 7.50,
+    "cantidad": 40,
+    "descripcion": "Ensalada fresca con aderezo César"
+  },
+  {
+    "id": "P005",
+    "nombre": "Papas Fritas",
+    "precio": 3.99,
+    "cantidad": 100,
+    "descripcion": "Papas fritas crujientes con sal"
+  },
+  {
+    "id": "P006",
+    "nombre": "Refresco",
+    "precio": 2.50,
+    "cantidad": 80,
+    "descripcion": "Bebida fría surtida"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "U001",
+    "nombre": "Juan García",
+    "usuario": "juan",
+    "contraseña": "123456",
+    "rol": "gerente"
+  },
+  {
+    "id": "U002",
+    "nombre": "María López",
+    "usuario": "maria",
+    "contraseña": "123456",
+    "rol": "cajero"
+  },
+  {
+    "id": "U003",
+    "nombre": "Carlos Rodríguez",
+    "usuario": "carlos",
+    "contraseña": "123456",
+    "rol": "chef"
+  },
+  {
+    "id": "U004",
+    "nombre": "Ana Martínez",
+    "usuario": "ana",
+    "contraseña": "123456",
+    "rol": "cliente"
+  },
+  {
+    "id": "U005",
+    "nombre": "Pedro Sánchez",
+    "usuario": "pedro",
+    "contraseña": "123456",
+    "rol": "mesero"
+  }
+]
