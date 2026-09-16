@@ -1,0 +1,221 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    RESTAURANTE APP - SEMANA 14
+                      GUÍA RÁPIDA DE REFERENCIA
+═══════════════════════════════════════════════════════════════════════════════
+
+📍 UBICACIÓN DEL PROYECTO
+─────────────────────────────────────────────────────────────────────────────
+C:\Users\User\OneDrive\Escritorio\2626-POO-Arias-Adriana\PARCIAL2\SEMANA 14\
+
+📂 ESTRUCTURA DE CARPETAS
+─────────────────────────────────────────────────────────────────────────────
+restaurante_app/
+├── datos/                      (Archivos JSON)
+│   ├── productos.json         ← Productos (6 items)
+│   └── usuarios.json          ← Usuarios (5 items)
+├── modelos/                   (Clases de datos)
+│   ├── producto.py
+│   └── usuario.py
+├── servicios/                 (Lógica de negocio)
+│   ├── archivo_servicio.py   ← Persistencia JSON
+│   └── restaurante_servicio.py ← Operaciones CRUD
+├── ui/                        (Interfaz gráfica)
+│   ├── login_view.py         ← Pantalla de login
+│   └── main_view.py          ← Pantalla principal (Semana 14)
+└── main.py                    ← Punto de entrada
+
+📄 DOCUMENTACIÓN
+─────────────────────────────────────────────────────────────────────────────
+README.md              → Documentación principal completa
+VERIFICACION.md        → Checklist de requisitos
+COMPONENTES.md         → Arquitectura de UI
+GUIA_RAPIDA.txt       → Este archivo
+test_crud.py          → Script de pruebas
+
+🚀 EJECUTAR LA APLICACIÓN
+─────────────────────────────────────────────────────────────────────────────
+1. Abrir PowerShell/CMD
+2. Navegar: cd restaurante_app
+3. Ejecutar: python main.py
+
+📋 CREDENCIALES DE PRUEBA
+─────────────────────────────────────────────────────────────────────────────
+Usuario:     juan
+Contraseña:  123456
+
+Otros usuarios disponibles: maria, carlos, ana, pedro (misma contraseña)
+
+🎯 OPERACIONES PRINCIPALES
+─────────────────────────────────────────────────────────────────────────────
+
+▶ REGISTRAR PRODUCTO
+  1. Llenar el formulario:
+     - Nombre: [tu producto]
+     - Precio: [número con decimales]
+     - Cantidad: [número entero]
+     - Descripción: [texto opcional]
+  2. Clic en botón VERDE "Registrar"
+  3. Producto aparece en la tabla
+  4. ID se genera automático (P001, P002, etc.)
+
+▶ CARGAR PRODUCTO
+  1. Escribir ID en campo "ID" (ej: P001)
+  2. Clic en botón AZUL "Cargar por ID"
+  3. Formulario se completa con datos del producto
+  4. Ahora puedes actualizar o eliminar
+
+▶ ACTUALIZAR PRODUCTO
+  1. Cargar el producto (ver paso anterior)
+  2. Modificar los datos en el formulario
+  3. Clic en botón NARANJA "Actualizar"
+  4. Cambios se guardan en JSON
+
+▶ ELIMINAR PRODUCTO
+  1. Cargar el producto (ver "Cargar Producto")
+  2. Clic en botón ROJO "Eliminar"
+  3. Confirmar en la ventana de diálogo
+  4. Producto se borra de la tabla y JSON
+
+▶ LIMPIAR FORMULARIO
+  1. Clic en botón GRIS "Limpiar"
+  2. Todos los campos se vacían
+  3. El foco se posiciona en "Nombre"
+
+📊 COMPONENTES UTILIZADOS
+─────────────────────────────────────────────────────────────────────────────
+
+Componentes Tkinter (tk.):
+  - Frame       → Contenedor genérico
+  - Label       → Texto estático
+  - Entry       → Campo de texto
+  - Text        → Área multilinea (descripción)
+  - Button      → Botones de acción
+  - Listbox     → Lista de usuarios
+
+Componentes ttk:
+  - Notebook    → Tabs principales (Productos, Usuarios, Ventas)
+  - LabelFrame  → Contenedor etiquetado (3 usados)
+  - Treeview    → Tabla profesional
+  - Scrollbar   → Barra de desplazamiento
+
+Gestores de Geometría:
+  - Pack        → Para secciones principales
+  - Grid        → Para formulario (2 columnas)
+
+🎨 COLORES DE BOTONES
+─────────────────────────────────────────────────────────────────────────────
+🟢 VERDE     "Registrar"  - Crear nuevo producto
+🔵 AZUL      "Cargar"     - Buscar y cargar producto
+🟠 NARANJA   "Actualizar" - Guardar cambios
+🔴 ROJO      "Eliminar"   - Borrar producto
+⚫ GRIS      "Limpiar"    - Vaciar formulario
+🔴 ROJO OSC  "Cerrar"     - Cerrar sesión
+
+✅ VALIDACIONES
+─────────────────────────────────────────────────────────────────────────────
+Nombre:
+  ✓ No puede estar vacío
+  ✗ Mensaje: "El nombre del producto no puede estar vacío"
+
+Precio:
+  ✓ Debe ser número válido
+  ✓ No puede ser negativo
+  ✗ Mensaje: "El precio debe ser un número válido"
+  ✗ Mensaje: "El precio no puede ser negativo"
+
+Cantidad:
+  ✓ Debe ser número entero
+  ✓ No puede ser negativo
+  ✗ Mensaje: "La cantidad debe ser un número entero válido"
+  ✗ Mensaje: "La cantidad no puede ser negativa"
+
+Descripción:
+  ✓ Opcional
+  ✓ Se trimea automáticamente
+
+ID (Búsqueda):
+  ✗ Mensaje: "Producto no encontrado" (si no existe)
+
+💾 PERSISTENCIA
+─────────────────────────────────────────────────────────────────────────────
+- Todos los cambios se guardan automáticamente en productos.json
+- Los datos persisten entre ejecuciones
+- No se necesita hacer "guardar" manualmente
+- La validación ocurre ANTES de guardar (en RestauranteServicio)
+
+📑 FLUJO DE LA APLICACIÓN
+─────────────────────────────────────────────────────────────────────────────
+1. Ejecutar main.py
+2. LoginView: Ingresar usuario y contraseña
+3. MainView: Se abre la interfaz principal
+4. Tabs disponibles:
+   - Productos ← Aquí está todo el CRUD
+   - Usuarios ← Lista de usuarios del sistema
+   - Ventas ← En desarrollo
+
+🧪 EJECUTAR PRUEBAS AUTOMATIZADAS
+─────────────────────────────────────────────────────────────────────────────
+cd SEMANA 14
+python test_crud.py
+
+Resultado esperado: 8/8 pruebas PASADAS ✓
+
+📋 REQUISITOS CUMPLIDOS
+─────────────────────────────────────────────────────────────────────────────
+✓ Componentes y contenedores Tkinter/ttk
+✓ Arquitectura modular (datos → modelos → servicios → ui)
+✓ Operaciones CRUD completas
+✓ Persistencia en JSON
+✓ Validaciones robustas
+✓ Interfaz clara y profesional
+✓ Separación de responsabilidades
+✓ Documentación completa
+✓ Pruebas automatizadas
+
+🔧 MÉTODOS DISPONIBLES EN RestauranteServicio
+─────────────────────────────────────────────────────────────────────────────
+
+Autenticación:
+  validar_acceso(usuario, contraseña)
+  cerrar_sesion()
+  obtener_usuario_actual()
+
+Lectura:
+  obtener_productos()
+  obtener_usuarios()
+  obtener_cantidad_producto(producto_id)
+
+CRUD Productos:
+  registrar_producto(nombre, precio, cantidad, descripcion)
+  cargar_producto_por_id(producto_id)
+  actualizar_producto(producto_id, nombre, precio, cantidad, descripcion)
+  eliminar_producto(producto_id)
+  recargar_productos()
+
+⚠️  NOTAS IMPORTANTES
+─────────────────────────────────────────────────────────────────────────────
+1. La lógica de negocio está en RestauranteServicio, NO en la UI
+2. La UI solo coordina y muestra mensajes
+3. Los JSON se actualizan automáticamente
+4. No es necesario hacer clic en un botón "Guardar"
+5. Las validaciones ocurren antes de guardar
+6. Se requiere confirmación para eliminar
+7. El ID se genera automáticamente en formato PXXX
+
+📞 INFORMACIÓN ADICIONAL
+─────────────────────────────────────────────────────────────────────────────
+Para más detalles:
+  - Leer README.md (documentación principal)
+  - Consultar COMPONENTES.md (arquitectura de UI)
+  - Ver VERIFICACION.md (checklist completo)
+
+🎓 SEMANA 14: COMPONENTES Y CONTENEDORES EN TKINTER
+─────────────────────────────────────────────────────────────────────────────
+Tema:       Componentes y Contenedores
+Asignatura: Programación Orientada a Objetos
+Año:        2026
+Estado:     ✅ COMPLETADO Y VERIFICADO
+
+═══════════════════════════════════════════════════════════════════════════════
+                          ¡LISTO PARA USAR!
+═══════════════════════════════════════════════════════════════════════════════
